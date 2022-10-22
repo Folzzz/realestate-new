@@ -5,7 +5,7 @@ import { ScrollMenu, VisibilityContext } from 'react-horizontal-scrolling-menu';
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from 'react-icons/fa';
 
 
-const leftArrow = () => {
+const LeftArrow = () => {
     const { scrollPrev } = useContext(VisibilityContext);
 
     return (
@@ -21,7 +21,7 @@ const leftArrow = () => {
     )
 };
 
-const rightArrow = () => {
+const RightArrow = () => {
     const { scrollNext } = useContext(VisibilityContext);
 
     return (
@@ -40,7 +40,7 @@ const rightArrow = () => {
 const ImageScrollbar = ({ data }) => {
   
     return (
-    <ScrollMenu LeftArrow={leftArrow} RightArrow={rightArrow} style={{ overflow: 'hidden'}}>
+    <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow} style={{ overflow: 'hidden'}}>
         {
             data.map((item) => (
                 <Box w="910px" key={item.id} itemId={item.id} overflow="hidden" p="1" >
